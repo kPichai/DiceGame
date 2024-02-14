@@ -8,10 +8,13 @@ public class RunGame {
     private Die d2 = new Die();
     private int[] currentDiceVals;
 
+    private DieGame d;
+
     // Constructor which sets the inital money amount too $100
-    public RunGame() {
+    public RunGame(DieGame d) {
         money = 100;
         currentDiceVals = new int[2];
+        this.d = d;
     }
 
     // Returns the amount of money the user has
@@ -109,11 +112,13 @@ public class RunGame {
             System.out.println("\nOh no, it looks like your bet failed!\n");
             System.out.println("Your new bank account balance is: $" + money +
                     ". Better luck next time!");
+            d.setGameState(2);
         } else {
             System.out.println("\nCongrats, it looks like your bet was "
                     + "successful!\n");
             System.out.println("Your new bank account balance is: $" + money +
                     ". I hope your luck continues!");
+            d.setGameState(1);
         }
     }
 }

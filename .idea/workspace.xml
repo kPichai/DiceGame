@@ -4,23 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="09245a31-ff0b-46d3-aaf1-ef7e0767d829" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DiceGame.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resources/dice-six-faces-five.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resources/dice-six-faces-four.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resources/dice-six-faces-one.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resources/dice-six-faces-six.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resources/dice-six-faces-three.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resources/dice-six-faces-two.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Die.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DieGame.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DieGameView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/RunGame.java" afterDir="false" />
+    <list default="true" id="09245a31-ff0b-46d3-aaf1-ef7e0767d829" name="Changes" comment="Created and added a lot to the DiceGameView Class which now displays the game board mostly. Also incorporated some logic changes into the backend (DiceGame and RunGame) in order to make them interact more smoothly with the frontend.">
+      <change afterPath="$PROJECT_DIR$/Resources/perspective-dice-six-faces-random.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DieGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DieGame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DieGameView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DieGameView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/RunGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RunGame.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,27 +26,27 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 6
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
   <component name="ProjectId" id="2c8e8Q7ckNVCWW6OhYbb2y5zfUK" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.DieGame.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.DieGame.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/Resources" />
@@ -72,7 +61,20 @@
       <option name="presentableId" value="Default" />
       <updated>1707497473491</updated>
     </task>
+    <task id="LOCAL-00001" summary="Created and added a lot to the DiceGameView Class which now displays the game board mostly. Also incorporated some logic changes into the backend (DiceGame and RunGame) in order to make them interact more smoothly with the frontend.">
+      <option name="closed" value="true" />
+      <created>1707792588834</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1707792588834</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Created and added a lot to the DiceGameView Class which now displays the game board mostly. Also incorporated some logic changes into the backend (DiceGame and RunGame) in order to make them interact more smoothly with the frontend." />
+    <option name="LAST_COMMIT_MESSAGE" value="Created and added a lot to the DiceGameView Class which now displays the game board mostly. Also incorporated some logic changes into the backend (DiceGame and RunGame) in order to make them interact more smoothly with the frontend." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

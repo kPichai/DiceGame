@@ -4,6 +4,8 @@ import java.util.Scanner;
 public class DieGame {
     private DieGameView window;
     private RunGame game;
+
+    private int gameState;
     // Main function to call a version of the game and run it
     public static void main(String[] args) {
         // Makes DieGame object and runs the game
@@ -13,7 +15,16 @@ public class DieGame {
 
     public DieGame() {
         window = new DieGameView(this);
-        game = new RunGame();
+        game = new RunGame(this);
+        gameState = 0;
+    }
+
+    public int getGameState() {
+        return gameState;
+    }
+
+    public void setGameState(int gameState) {
+        this.gameState = gameState;
     }
 
     public int[] getDiceRolls() {
@@ -30,6 +41,7 @@ public class DieGame {
                 + "om 2 - 12) that the dice will add up too, or bet"
                 + " between even or odd.");
     }
+
     // Checks the type of bet the user inputted to make sure its format is valid
     public String checkBetType(String response, Scanner sc) {
         String repResponse = response;
@@ -128,20 +140,30 @@ public class DieGame {
         return valRep;
     }
 
+    public static void startGame(Scanner sc) {
+        String response;
+        do {
+            System.out.println("Press enter to start the game: ");
+            response = sc.nextLine();
+        } while (response.isEmpty());
+    }
     // Runs the main game script, and calls functions from other classes
     //                                      necessary to run the full game
     public void runGame() {
 
         // Prints the instructions by calling the above function
         printInstructions();
-
         // Creates a scanner object in order to be able to read in user input
         Scanner sc = new Scanner(System.in);
+        gameState = 0;
+        window.repaint();
+        startGame(sc);
         int whenToPrompt = 0;
         String response;
         String typeBet;
         int betAmount;
         int val;
+        gameState = 0;
         window.repaint();
         // Goes into a loop that runs the main part of the game including
         //              simulating results and getting betting amounts etc
@@ -149,8 +171,8 @@ public class DieGame {
             // Prompts the user to enter a bet type
             System.out.println("Here comes your dice roll! What would you like "
                     + "to bet on?");
-            System.out.println("\nRemeber that you can bet on either a number"
-                    + "(from 2 - 12) that the dice will add up too, or bet between even"
+            System.out.println("\nRemember that you can bet on either a number"
+                    + " (from 2 - 12) that the dice will add up too, or bet between even"
                     + " or odd.\n");
             System.out.println("Please enter your answer in the form \"Number: "
                     + "{your number}\" or \"odd\" or \"even\".\n");
@@ -189,7 +211,7 @@ public class DieGame {
                 System.out.println("Sorry, you went bankrupt! You can no longer"
                         + " continue this round of the game.");
                 System.out.println("Thanks for playing! Better luck next time!");
-                // GAME STATE
+                gameState = 3;
                 window.repaint();
                 whenToPrompt = 0;
             }
@@ -200,12 +222,12 @@ public class DieGame {
                 // Prompts user to get their input on whether to continue or not
                 System.out.println("If you want to continue playing, type \"y\""
                         + ", otherwise type \"n\".");
+                gameState = 0;
+                window.repaint();
                 response = sc.nextLine();
                 if (response.equals("n")) {
                     break;
                 }
-                // GAME STATE
-                window.repaint();
             }
             whenToPrompt = 1;
             System.out.println("\n");
@@ -215,5 +237,7 @@ public class DieGame {
         // Prints their final money balance so that the user knows
         System.out.println("\nThank you for playing! Your final bank balance is"
                 + ": $" + game.getMoney() + ".");
+        gameState = 4;
+        window.repaint();
     }
 }
