@@ -12,8 +12,6 @@ public class Die
         } else {
             this.numSides = numSides;
         }
-        // NOTE: if the user enters an int less than 2
-        // set numSides to 6.
     }
 
     public Die() {

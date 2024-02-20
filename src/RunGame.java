@@ -18,7 +18,9 @@ public class RunGame {
     }
 
     // Returns the amount of money the user has
-    public int getMoney() {return money;}
+    public int getMoney() {
+        return money;
+    }
 
     // Simulates a double roll of the dice using both d1 and d2
     public int[] simulateRoll() {
@@ -108,17 +110,24 @@ public class RunGame {
         }
 
         // Checked if they lost or gained money
+        // Case where they lost money
         if (tempMoney > money) {
             System.out.println("\nOh no, it looks like your bet failed!\n");
             System.out.println("Your new bank account balance is: $" + money +
                     ". Better luck next time!");
             d.setGameState(2);
-        } else {
+            // Repaints window to show the result of the bet
+            d.getWindow().repaint();
+        }
+        // Case where they gained money
+        else {
             System.out.println("\nCongrats, it looks like your bet was "
                     + "successful!\n");
             System.out.println("Your new bank account balance is: $" + money +
                     ". I hope your luck continues!");
+            // Repaints window to show the result of the bet
             d.setGameState(1);
+            d.getWindow().repaint();
         }
     }
 }
